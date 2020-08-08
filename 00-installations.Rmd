@@ -1,0 +1,109 @@
+---
+title: "Basic installations"
+author: "Jørn I. Halvorsen"
+date: "2018/06/1 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r include=FALSE}
+library(homepageJIH)
+library(ggplot2)
+library(gridExtra)
+library(plotly)
+library(grid)
+require("magrittr")
+```
+
+
+```{r include=FALSE}
+toc <- readLines("00-installations.Rmd")
+tocc <- character()
+
+for (i in 1:length(toc)) {
+  if(substr(toc[i][1], 1, 2) == "# ") {
+    toc[i] <- gsub("# ", "", toc[i], fixed = TRUE) %>% 
+                gsub("#", "", ., fixed = TRUE) %>%
+                paste0("     ", .)
+    tocc <- append(tocc, toc[i])
+  }
+}
+
+text <- paste(tocc[-1], "\n")
+yy <- seq(.9, 0, length = length(text))
+```
+
+# Outline
+
+```{r, echo = FALSE}
+plot(x = rep(0.2, length(text)), y = yy * 1.035, 
+     xlim = c(0, 1), ylim = c(-0.1, 1), xlab = "", ylab = "", axes = FALSE, 
+     col = "#056EA7", type = "p", pch = 16)
+text(x = 0.2, y = yy, labels = text, adj = 0, col = "black")
+```
+
+---
+
+# Installing R
+
+[Home page](https://cran.r-project.org/bin/windows/)
+
+[Download link (Windows 10)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+---
+
+# RStudio (Desktop-version)
+
+[Home page](https://rstudio.com/products/rstudio/download/)
+
+[Download link (Windows 10)](https://download1.rstudio.org/desktop/windows/RStudio-1.3.1056.exe)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+---
+
+# R-Tools
+
+[Home page](https://cran.r-project.org/bin/windows/Rtools/)
+
+[Download link (Windows 10)](https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+
+---
+
+# Git
+
+[Home page](https://gitahead.github.io/gitahead.com/)
+
+[Download link (Windows 10)](https://github.com/gitahead/gitahead/releases/tag/v2.6.3)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+
+---
+
+# Gitahead
+
+[Home page](https://gitahead.github.io/gitahead.com/)
+
+[Download link (Windows 10)](https://github.com/gitahead/gitahead/releases/tag/v2.6.3)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+
+---
+
+# Zotero
+
+[Home page](https://www.zotero.org/download/)
+
+[Download link (Windows 10)](https://www.zotero.org/download/client/dl?channel=release&platform=win32&version=5.0.89)
+
+[Download link (Mac)](https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
+
+
+
